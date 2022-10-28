@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $company = Company::get();
-        return view('home', compact('company'));
+        $companies = Company::paginate(10);
+        return view('home', compact('companies'));
     }
 }

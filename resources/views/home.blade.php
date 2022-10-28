@@ -32,7 +32,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($company as $company)
+            @foreach ($companies as $company)
             <tr>
                 <td>{{$company->name}}</td>
                 <td>{{$company->email}}</td>
@@ -49,6 +49,9 @@
             @endforeach
         </tbody>
     </table>
+    <div class="d-flex justify-content-center">
+    {!! $companies->links() !!}
+    </div>
 </div>
 @endsection
 
@@ -56,8 +59,10 @@
 
 <script>
     $(document).ready(function () {
-        $('#example').DataTable();
-    // alert('hi')
+        $('#example').DataTable({
+        paging: false,
+    });    
     }); 
+    
 </script>
 @endpush

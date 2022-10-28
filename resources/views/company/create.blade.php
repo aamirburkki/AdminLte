@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card-body">
-  <h1>{{ __('messages.Form') }}</h1>
+  <h1>{{ __('messages.CompanyAppForm') }}</h1>
   {{-- @if ($errors->any())
   <div class="alert alert-danger">
     <ul>
