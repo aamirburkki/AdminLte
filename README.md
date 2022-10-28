@@ -1,22 +1,30 @@
-## Laravel 8 & AdminLTE 3 & Auth 
+##### Requirments #####
+### php version shuold b 8.0
 ### Install NPM Package & Composer Package
+### clone it to htdocs folder in xammp 
 
 ```
-$ composer install   --> ติดตั้ง package ต่าง ๆ ของ php
+$ composer install
 ```
 
 ```
-$ npm i หรือ npm install   --> ติดตั้ง package ต่าง ๆ ของ node
+$ npm i and npm install
+$ npm run dev
+$ composer require laravel/ui
+$ php artisan ui bootstrap
+$ https://github.com/bo3bdo/laravel-admin.git
+
 ```
 
 ###  Usage
 
-1. Copy .env.example  -> ส้รางไฟล์ใหม่ชื่อ .env
-2. Setup Env:  .env แก้ไขชื่อดาต้าเบสและรหัสผ่านให้ถูกต้อง
-3. สร้างตารางโดยใช้คำสั่งด้านล่าง
+1. rename .env.example to .env
+2. Setup .env by providing database and mailtrap credentials 
 
 ```
-$ php artisan migrate:fresh
+$ php artisan key:generate
+$ php artisan storage:link
+$ php artisan migrate
 ```
 
 ### Run Project
@@ -24,15 +32,3 @@ $ php artisan migrate:fresh
 ```
 $ php artisan serve
 ```
-
-ใส่ port ที่ต้องการ
-```
-$ php artisan serve --port=9000
-```
-
-### Preview
--- Login Page --
-![image2](https://user-images.githubusercontent.com/67111961/149990261-7fc091ba-a337-4fd5-bf13-05931bf7e925.PNG)
-
--- Home --
-![image1](https://user-images.githubusercontent.com/67111961/149990278-f12aef32-67fa-4fa5-b7ec-7962a8d9abf4.PNG)
